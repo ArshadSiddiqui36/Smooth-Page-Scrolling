@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Q3. Page with link for go to the bottom from top</title>
+	<link rel="icon" href="" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+		<!-- --------------------------------------------------Internal CSS Start-------------------------------------------------- -->
+		<style type="text/css">
+			
+			/* .........................Important & Mandatory Properties........... */
+				*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; } /* Universal Selector (All Elements Selected) */
+				html { font-size: 62.5%; scroll-behavior: smooth;} /*  62.5% = 10px = 1rem But By Default 100% = 16px = 1rem */
+				body { font-family: Arial, sans-serif; 
+					background: url('images/wallpaperflare.png') no-repeat;
+					background-size: cover;
+					background-position: center;
+					background-attachment: fixed;
+
+				}
+				/* Selection Used By User To Select Content */
+				::selection {
+				background: yellow;
+				color: black;
+				outline: white;
+				cursor: pointer;
+			}
+
+			/* .........................Variable Creation Start.................... */
+				:root {
+					--width: 100vw;  	/* width: var(--width); | width: calc(var(--width) - 80vw); */
+					--height: 100vh;	/* height: var(--height); | height: calc(var(--height) - 80vh); */
+					--primary-color: #003CFF;	/* var(--primary-color); */
+					--secondary-color: #04A200;
+				}
+			/* .........................Variable Creation End...................... */
+
+
+			header {
+				width: 100%;
+				height: 8rem;
+				/* background: rgb(0,78,255); */
+				background: linear-gradient(243deg, rgba(0,78,255,1) 0%, rgba(18,255,0,1) 32%, rgba(254,255,0,1) 67%, rgba(178,57,5,1) 100%);
+				box-shadow: 0 .2rem .5rem 0 rgba(0, 0, 0, .5);
+				display: grid;
+				place-items: center;
+			}
+
+			header > a {
+				border: .1rem solid rgba(0, 0, 0, .5);
+				font-size: 3rem;
+				text-decoration: none;
+				color: #3e3e3e;
+				padding: .5rem 2rem;
+				border-radius: .5rem;
+				box-shadow: 0 .2rem .5rem 0 rgba(0, 0, 0, .5);
+			}
+
+			.heading {
+				text-align: center;
+				font-size: 8rem;
+				padding: 20rem;
+				color: #fff;
+				font-weight: normal;
+				width: 100%;
+				height: calc(100vh - 10rem);
+				text-shadow: 0 .2rem .5rem rgba(0, 0, 0, 1.0);
+			}
+
+			.heading > b {
+				color: #02C121;
+			}
+
+			.sections > * {
+				/* border: .1rem solid black; */
+				width: 100%;
+				height: 100vh;
+				margin: 10rem 0;
+				/* box-shadow: 0 .2rem .5rem 0 rgba(0, 0, 0, .5); */
+			}
+
+			.section1 {
+				background: url('images/Frozen1.png');
+			}
+			.section2 {
+				background: url('images/Frozen2.png');
+			}
+			.section3 {
+				background: url('images/Frozen3.png');
+			}
+			.section4 {
+				background: url('images/Frozen4.png');
+			}
+			.section5 {
+				background: url('images/Frozen5.png');
+			}
+
+			.section1, .section2, .section3, .section4, .section5 {
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+			}
+
+			footer {
+				width: 100%;
+				height: 20rem;
+				background: #0E0E0E;
+				display: grid;
+				place-items: center;
+			}
+
+			footer > a { border: none; box-shadow: none; animation: animate 2s linear infinite;}
+			footer > a > .top_icon {
+				width: 8rem;
+				height: 8rem;
+				transform: rotate(-90deg);
+				background: url('images/pngbarn.png');
+				background-position: center;
+				background-size: cover;
+				border-radius: 50%;				
+			}
+
+			@keyframes animate {
+				0%   {margin-top: 0;}
+				50%  {margin-top: -5rem;}
+				100% {margin-top: 0;}
+			}
+
+
+
+
+			/* ..........................Media Query Start......................... */
+				
+				/* 4K - 2560px */
+				@media (max-width: 2560px) {
+					html {
+						font-size: 62.5%;
+					}
+				}
+
+				/* Laptop L - 1440px */
+				@media (max-width: 1440px) {
+					html {
+						font-size: 62.5%;
+					}
+				}
+
+				/* Laptop 1024px */
+				@media (max-width: 1024px) {
+					html {
+						font-size: 62.5%;
+					}
+				}
+
+				/* Mini Laptop | Tablet 998px */
+				@media (max-width: 998px) {
+					html {
+						font-size: 55%;  /* 55% = 8.8px */
+					}
+				}
+
+				/* Tablet - 768px */
+				@media (max-width: 768px) {
+					html {
+						font-size: 50%;  /* 45% = 7.2px */
+					}
+				}
+
+				/* Mobile L - 425px */
+				@media (max-width: 425px) {
+					html {
+						font-size: 42%;
+					}	
+				}
+
+				/* Mobile M - 375px */
+				@media (max-width: 375px) {
+					html {
+						font-size: 40%;
+					}	
+				}
+
+				/* Mobile S - 320px */
+				@media (max-width: 320px) {
+					html {
+						font-size: 38.25%;
+					}
+				}
+
+			/* ..........................Media Query End........................... */
+			
+		</style>
+
+</head>
+<body>
+	<header><a href="#bottom" name="#top">Go to the Bottom</a></header>
+		<h1 class="heading">Go To <b>Bottom</b> From <b>Top</b><br>And <b>Bottom </b>To<b> Top</b></h1>
+	<div class="sections">
+		<section class="section1"></section>
+		<section class="section2"></section>
+		<section class="section3"></section>
+		<section class="section4"></section>
+		<section class="section5"></section>
+	</div>
+	<footer><a href="#top" name="bottom" title="Click for go to Top"><div class="top_icon"></div></a></footer>
+</body>
+</html>
